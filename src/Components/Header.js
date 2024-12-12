@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Header = () => {
   return (
     <header
@@ -12,20 +13,28 @@ const Header = () => {
         alignItems: "center",
       }}
     >
-      {/* Logo Section */}
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <img
+          {/* Logo Section */}
+      <nav style={{ display: 'flex', alignItems: 'center' } }>
+        <a href="home"
+          style={{
+              color: 'white',
+              textDecoration: 'none',
+              fontSize: '16px',
+              padding: '5px 5px'
+          }}>
+          <img
           src="https://cdn-icons-png.flaticon.com/512/2673/2673003.png"
           alt="Ballot Box Logo"
           style={{ height: "40px", marginRight: "10px" }}
-        />
-        <h1 style={{ fontSize: "24px", margin: 0 }}>Ballot Box</h1>
-      </div>
+          />
+          Ballot Box
+        </a>
+      </nav>
 
       {/* Navigation Links */}
       <nav style={{ display: "flex", gap: "20px" }}>
         <a
-          href="#election-results"
+          href="electionresults"
           style={{
             color: "white",
             textDecoration: "none",
@@ -36,19 +45,18 @@ const Header = () => {
           Election Results
         </a>
         <a
-          href="#ballot-review"
+          href="review"
           style={{
             color: "white",
             textDecoration: "none",
             fontSize: "16px",
             padding: "5px 10px",
-            borderBottom: "2px solid orange", // Highlight current page
           }}
         >
           Ballot Review
         </a>
         <a
-          href="#cast-vote"
+          href="castvote"
           style={{
             color: "white",
             textDecoration: "none",
@@ -59,7 +67,7 @@ const Header = () => {
           Cast Vote
         </a>
         <a
-          href="#logout"
+          href="login"
           style={{
             color: "white",
             textDecoration: "none",
